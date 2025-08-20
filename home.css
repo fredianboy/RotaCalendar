@@ -1,0 +1,62 @@
+
+  * { box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Verdana, sans-serif; background:#f4f4f4; color:#333; padding:20px; }
+  h1 { margin:0 0 10px; color:#4a90e2; }
+
+  .bar { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin:10px 0 14px; }
+  .bar label { font-weight:600; }
+  select, input[type="text"], input[type="password"] { padding:6px 8px; border:1px solid #ccc; border-radius:6px; }
+  button { padding:6px 12px; border:0; border-radius:6px; cursor:pointer; background:#4a90e2; color:#fff; }
+  button.secondary { background:#2f855a; }
+  button.danger { background:#d33; }
+
+  /* Login UI */
+  .user-bar { display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+  .login-form { display:flex; gap:8px; align-items:center; }
+  .session.hidden, .login-form.hidden { display:none; }
+  .role-badge { color:#2f855a; margin-left:6px; }
+  .ics-wrap code { background:#e9e9e9; padding:2px 6px; border-radius:4px; }
+
+  /* Table */
+  .table-wrap { overflow:auto; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,.08); background:#fff; }
+  table { width:1200px; max-width:100%; border-collapse:collapse; border:2px solid #000; }
+  th, td { border:1px solid #000; padding:4px 6px; text-align:center; font-size:0.9rem; }
+  th { background:#f0f0f0; font-weight:700; }
+  th.weekend, td.weekend { background:#e0e0e0 !important; color:#333; }
+
+  /* Sticky staff column */
+  .staff-col { position:sticky; left:0; background:#e8f0fe; text-align:left; z-index:2; min-width:220px; }
+
+  /* Staff cell */
+  .name-cell { display:flex; align-items:center; gap:8px; }
+  .name-cell .name { outline:none; min-width:8ch; }
+  .name-cell .delete {
+    border:none; background:transparent; color:#888; font-size:1rem; font-weight:bold; line-height:1;
+    padding:0 4px; cursor:pointer; transition:color .2s, transform .1s;
+  }
+  .name-cell .delete:hover { color:#d33; transform:scale(1.2); }
+  .name-cell.readonly .delete { display:none; }
+
+  /* Duty select — looks blank until chosen, no arrow */
+  .duty-select {
+    width:100%; border:none; background:transparent;
+    appearance:none; -webkit-appearance:none; -moz-appearance:none;
+    text-align:center; cursor:pointer; font-weight:bold; padding:2px 0;
+  }
+  .duty-select:empty, .duty-select[value=""] { color:transparent; }
+  .duty-select:focus { outline:2px solid #4a90e2; background:#eef6ff; }
+
+  /* Color coding driven by data-duty on <td> (weekend grey overrides via !important above) */
+  td[data-duty="A/L"] { background:#c8f7c5; color:#1a531b; }
+  td[data-duty="D75"] { background:#c5e0f7; color:#083d77; }
+  td[data-duty="D77"] { background:#aac4f7; color:#002b5c; }
+  td[data-duty="E1"]  { background:#ffe6a1; color:#8a6000; }
+  td[data-duty="L2"]  { background:#ffd4a1; color:#6e2b00; }
+  td[data-duty="MN"]  { background:#e5c5f7; color:#4a0072; }
+  td[data-duty="R"]   { background:#f7c5c5; color:#5c0000; }
+
+  /* Comments */
+  .comment-box { width:100%; min-width:140px; resize:horizontal; font-size:0.85rem; padding:2px 4px; line-height:1.2; }
+
+  /* Small helpers */
+  .grow { flex:1; }

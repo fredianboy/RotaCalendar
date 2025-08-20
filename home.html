@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>🐓</title>
+<link rel="stylesheet" href="home.css" />
+<script src="home.js" defer></script>
+
+</head>
+<body>
+
+<h1>🐓Calendar</h1>
+<!-- Controls -->
+<div class="bar">
+  <label for="month">Month</label>
+  <select id="month"></select>
+  <label for="year">Year</label>
+  <select id="year"></select>
+
+  <div class="grow"></div>
+
+  <input id="staff-input" type="text" placeholder="Add staff name…" />
+  <button id="add-staff">Add</button>
+
+  <button id="export-ics" class="secondary">Download ICS for Me</button>
+<div class="user-bar">
+  <div id="session-info" class="session hidden">
+    Logged in as <strong id="who-name"></strong>
+    <span id="who-role" class="role-badge"></span>
+    <button id="logout-btn" class="danger" type="button">Logout</button>
+    <span class="ics-wrap" id="ics-link-wrap" style="margin-left:8px;"></span>
+  </div>
+  <form id="login-form" class="login-form hidden">
+    <input id="login-username" type="text" placeholder="Username" />
+    <input id="login-password" type="password" placeholder="Password" />
+    <button type="submit">Login</button>
+  </form>
+</div>
+
+</div>
+
+<div class="table-wrap">
+  <table id="calendar-table">
+    <!-- thead/tbody built by JS -->
+  </table>
+</div>
+
+</body>
+</html>
